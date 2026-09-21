@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grok Bot Galaxy · o resumo do evento em português</title>
+<meta name="description" content="Ebook gratuito de 23 páginas com o essencial das 25 horas do Grok Bot Galaxy, o evento em que a SpaceXAI montou uma empresa com agentes de IA. Por Simião Cavalcante.">
+<meta name="theme-color" content="#02050A">
+<link rel="canonical" href="https://simiao-cavalcante.github.io/grok-bot-galaxy/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Grok Bot Galaxy · 25 horas de evento em 23 páginas">
+<meta property="og:description" content="Ebook gratuito em português com o essencial do evento em que a SpaceXAI montou uma empresa com agentes de IA.">
+<meta property="og:url" content="https://simiao-cavalcante.github.io/grok-bot-galaxy/">
+<meta property="og:image" content="https://simiao-cavalcante.github.io/grok-bot-galaxy/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2302050A'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%234A9FFF'/%3E%3Cpath d='M32 14a18 18 0 0 1 18 18' fill='none' stroke='%230B5CFF' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M32 50a18 18 0 0 1-18-18' fill='none' stroke='%234A9FFF' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/capa.webp">
+<style>
+:root{
+  --noite:#02050A; --noite2:#050B1A; --marinho:#0A2A6B; --azul:#0B5CFF; --ceu:#4A9FFF; --gelo:#D6E8FF;
+  --tinta:#EAF1FF; --tinta2:#9DB0D4; --linha:rgba(74,159,255,.18); --linha2:rgba(74,159,255,.4);
+  --display:"Clash Display","Sora",system-ui,sans-serif; --corpo:"Sora",system-ui,sans-serif; --serifa:"Instrument Serif",Georgia,serif;
+  --grad:linear-gradient(100deg,#4A9FFF 0%,#0B5CFF 55%,#7CB8FF 100%);
+  --max:1180px; --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--noite);color:var(--tinta);font:400 17px/1.65 var(--corpo);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ceu);outline-offset:3px;border-radius:6px}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+em.s{font-family:var(--serifa);font-style:italic;font-weight:400;letter-spacing:-.01em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+.kicker{font:600 12px/1 var(--corpo);letter-spacing:.22em;text-transform:uppercase;color:var(--ceu)}
+h2{font:600 clamp(30px,4.6vw,54px)/1.06 var(--display);letter-spacing:-.015em;margin:14px 0 18px}
+.lead{color:var(--tinta2);max-width:62ch}
+section{position:relative;padding:clamp(72px,10vw,128px) 0}
+.grao{position:fixed;inset:0;pointer-events:none;z-index:40;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* barra superior */
+.topo{position:fixed;inset:0 0 auto 0;z-index:30;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.topo.solido{background:rgba(2,5,10,.78);backdrop-filter:blur(12px);border-color:var(--linha)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.topo img{height:30px;width:auto}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font:600 15px/1 var(--corpo);text-decoration:none;border:1px solid var(--linha2);color:var(--tinta);background:rgba(11,92,255,.08);cursor:pointer;transition:transform .2s var(--ease),box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px);background:rgba(11,92,255,.2)}
+.btn.pri{background:var(--azul);border-color:var(--azul);color:#fff;box-shadow:0 10px 40px -8px rgba(11,92,255,.75),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn.pri:hover{box-shadow:0 16px 54px -8px rgba(11,92,255,.95),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn.g{min-height:60px;padding:0 32px;font-size:17px}
+.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.btn small{font-weight:400;opacity:.8;font-size:13px}
+
+/* hero */
+.hero{min-height:100svh;padding:104px 0 70px;display:flex;align-items:center;overflow:hidden;isolation:isolate}
+#galaxia{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(900px 600px at 72% 46%,rgba(11,92,255,.22),transparent 65%),linear-gradient(180deg,rgba(2,5,10,.2) 0%,rgba(2,5,10,0) 40%,var(--noite) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(30px,5vw,80px);align-items:center}
+.hero h1{font:600 clamp(38px,min(6vw,9.4vh),80px)/.98 var(--display);letter-spacing:-.025em;margin:22px 0 26px}
+.hero h1 em.s{font-size:1.06em;line-height:.9}
+.hero p.lead{font-size:clamp(16px,1.35vw,19px)}
+.acoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;align-items:center}
+.meta-hero{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:13px;color:var(--tinta2)}
+.meta-hero span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ceu);margin-right:9px;vertical-align:middle;box-shadow:0 0 10px var(--ceu)}
+.sobe{opacity:0;transform:translateY(26px);animation:sobe .9s var(--ease) forwards}
+.sobe.d1{animation-delay:.08s}.sobe.d2{animation-delay:.2s}.sobe.d3{animation-delay:.34s}.sobe.d4{animation-delay:.48s}.sobe.d5{animation-delay:.62s}
+@keyframes sobe{to{opacity:1;transform:none}}
+
+/* livro 3D */
+.palco{perspective:1600px;display:grid;place-items:center;min-height:520px}
+.livro{position:relative;width:min(380px,74vw);aspect-ratio:210/297;transform-style:preserve-3d;transform:rotateY(var(--ry,-24deg)) rotateX(var(--rx,6deg));transition:transform .25s var(--ease);animation:flutua 7s ease-in-out infinite}
+@keyframes flutua{0%,100%{translate:0 0}50%{translate:0 -14px}}
+.livro .capa{position:absolute;inset:0;border-radius:3px 8px 8px 3px;overflow:hidden;transform:translateZ(18px);box-shadow:0 0 0 1px rgba(255,255,255,.06)}
+.livro .capa img{width:100%;height:100%;object-fit:cover}
+.livro .capa::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 28%,rgba(255,255,255,0) 60%,rgba(255,255,255,.08) 100%);mix-blend-mode:screen;transform:translateX(var(--brilho,0%));transition:transform .25s var(--ease)}
+.livro .capa::before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;z-index:2;background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(255,255,255,.08) 60%,transparent)}
+.livro .lombada{position:absolute;left:0;top:0;bottom:0;width:36px;transform:rotateY(-90deg) translateZ(18px) translateX(-18px);transform-origin:left;background:linear-gradient(180deg,#071230,#02050a)}
+.livro .paginas{position:absolute;right:0;top:4px;bottom:4px;width:34px;transform:rotateY(90deg) translateZ(-16px) translateX(17px);transform-origin:right;background:repeating-linear-gradient(90deg,#dfe7f5 0 2px,#b9c6de 2px 3px)}
+.livro .verso{position:absolute;inset:0;transform:translateZ(-18px);background:#040915;border-radius:3px 8px 8px 3px}
+.sombra{position:absolute;bottom:6%;left:50%;width:62%;height:40px;translate:-50% 0;background:radial-gradient(closest-side,rgba(11,92,255,.55),transparent);filter:blur(18px);z-index:-1}
+.selo{position:absolute;right:-6%;top:6%;width:112px;height:112px;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--noite2);border:1px solid var(--linha2);font:600 11px/1.25 var(--corpo);letter-spacing:.12em;text-transform:uppercase;color:var(--gelo);transform:translateZ(60px) rotate(12deg);box-shadow:0 12px 40px rgba(0,0,0,.5)}
+.selo b{display:block;font:600 30px/1 var(--display);letter-spacing:0;color:#fff;margin-bottom:3px}
+.rolar{position:absolute;left:50%;bottom:22px;translate:-50% 0;width:26px;height:42px;border:1px solid var(--linha2);border-radius:20px}
+.rolar::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:4px;background:var(--ceu);animation:rolar 1.8s ease-in-out infinite}
+@keyframes rolar{0%{opacity:0;translate:0 0}30%{opacity:1}100%{opacity:0;translate:0 16px}}
+
+/* revelação ao rolar */
+.rev{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rev.in{opacity:1;transform:none}
+
+/* números */
+.numeros{padding:0;border-block:1px solid var(--linha);background:linear-gradient(180deg,rgba(10,42,107,.22),rgba(10,42,107,.04))}
+.numeros .wrap{display:grid;grid-template-columns:repeat(5,1fr)}
+.num{padding:38px 22px;border-left:1px solid var(--linha)}
+.num:first-child{border-left:0}
+.num b{display:block;font:600 clamp(38px,5vw,64px)/1 var(--display);letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.num span{display:block;margin-top:10px;font-size:13px;color:var(--tinta2);line-height:1.4}
+
+/* três dias */
+.dias .cab{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;margin-bottom:40px}
+.abas{display:inline-flex;position:relative;padding:5px;border:1px solid var(--linha2);border-radius:999px;background:rgba(5,11,26,.8)}
+.abas button{position:relative;z-index:1;min-height:46px;padding:0 24px;border:0;border-radius:999px;background:none;color:var(--tinta2);font:600 14px var(--corpo);cursor:pointer;transition:color .3s}
+.abas button[aria-selected="true"]{color:#fff}
+.abas .marca{position:absolute;top:5px;bottom:5px;left:0;width:0;border-radius:999px;background:var(--azul);box-shadow:0 6px 24px -4px rgba(11,92,255,.8);transition:left .45s var(--ease),width .45s var(--ease)}
+.painel{display:grid;grid-template-columns:.8fr 1fr 1fr;gap:1px;background:var(--linha);border:1px solid var(--linha);border-radius:22px;overflow:hidden}
+.painel>div{background:var(--noite2);padding:34px 30px;min-height:270px}
+.painel .grande{background:radial-gradient(420px 300px at 0% 0%,rgba(11,92,255,.3),transparent 70%),var(--noite2);display:flex;flex-direction:column;justify-content:space-between}
+.painel .grande b{font:600 clamp(44px,5.6vw,76px)/.95 var(--display);letter-spacing:-.03em}
+.painel .grande span{color:var(--tinta2);font-size:14px}
+.painel h3{font:600 12px var(--corpo);letter-spacing:.2em;text-transform:uppercase;color:var(--ceu);margin-bottom:14px}
+.painel p{color:var(--tinta2);font-size:15.5px}
+.painel .data{font:500 13px var(--corpo);color:var(--gelo);letter-spacing:.06em}
+.troca{animation:troca .55s var(--ease)}
+@keyframes troca{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* capítulos */
+.caps .grade{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,70px);align-items:start;margin-top:46px}
+.lista{list-style:none;border-top:1px solid var(--linha)}
+.lista li{border-bottom:1px solid var(--linha)}
+.lista button{width:100%;display:grid;grid-template-columns:54px 1fr auto;gap:8px;align-items:baseline;text-align:left;padding:20px 6px;background:none;border:0;color:var(--tinta);cursor:pointer;transition:padding .35s var(--ease),background .3s}
+.lista button .n{font:500 15px var(--display);color:var(--tinta2);transition:color .3s}
+.lista button .t{font:600 clamp(17px,1.7vw,21px)/1.25 var(--corpo);transition:color .3s}
+.lista button .pg{font-size:12px;color:var(--tinta2);letter-spacing:.08em;white-space:nowrap}
+.lista .desc{grid-column:2/4;display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.lista .desc>p{overflow:hidden;color:var(--tinta2);font-size:15px;font-weight:400}
+.lista li.on button{padding-left:16px;background:linear-gradient(90deg,rgba(11,92,255,.14),transparent 70%)}
+.lista li.on .n,.lista li.on .t{color:var(--ceu)}
+.lista li.on .desc{grid-template-rows:1fr;padding-top:8px}
+.lista .mini{display:none;margin:4px 0 22px 54px;width:min(300px,70%);border-radius:8px;border:1px solid var(--linha)}
+.visor{position:sticky;top:100px;display:grid;place-items:center;padding:30px;border-radius:26px;border:1px solid var(--linha);background:radial-gradient(500px 380px at 60% 20%,rgba(11,92,255,.22),transparent 70%),var(--noite2);min-height:600px;overflow:hidden}
+.visor .folha{position:relative;width:min(370px,100%);aspect-ratio:210/297}
+.visor img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:6px;box-shadow:0 30px 80px -20px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08);opacity:0;transform:rotate(3deg) translateY(18px) scale(.97);transition:opacity .5s var(--ease),transform .6s var(--ease)}
+.visor img.on{opacity:1;transform:rotate(-1.5deg)}
+.visor .etq{position:absolute;left:22px;bottom:18px;font:500 12px var(--corpo);letter-spacing:.14em;text-transform:uppercase;color:var(--tinta2)}
+
+/* ideias */
+.ideias{background:linear-gradient(180deg,transparent,rgba(10,42,107,.28) 50%,transparent)}
+.baralho{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,70px);align-items:center;margin-top:44px}
+.contador{font:600 clamp(90px,15vw,210px)/.85 var(--display);letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--linha2);min-width:1.25em;font-variant-numeric:tabular-nums}
+.carta{position:relative;padding:clamp(28px,4vw,50px);border-radius:26px;border:1px solid var(--linha2);background:linear-gradient(140deg,rgba(11,92,255,.2),rgba(5,11,26,.9) 55%);min-height:240px;display:flex;align-items:center;box-shadow:0 30px 90px -40px rgba(11,92,255,.7)}
+.carta p{font:400 clamp(20px,2.5vw,32px)/1.32 var(--corpo);letter-spacing:-.01em}
+.carta::before,.carta::after{content:"";position:absolute;inset:0;border-radius:26px;border:1px solid var(--linha);z-index:-1}
+.carta::before{transform:translate(12px,12px)}.carta::after{transform:translate(24px,24px);opacity:.5}
+.controles{grid-column:2;display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:34px}
+.pontos{display:flex;gap:7px;margin-left:auto}
+.pontos i{width:8px;height:8px;border-radius:50%;background:var(--linha2);transition:all .3s}
+.pontos i.on{background:var(--ceu);width:26px;border-radius:6px;box-shadow:0 0 12px var(--ceu)}
+
+/* para quem */
+.quem .tres{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.cartao{position:relative;padding:32px 28px;border-radius:22px;border:1px solid var(--linha);background:var(--noite2);overflow:hidden;transition:transform .4s var(--ease),border-color .3s}
+.cartao::before{content:"";position:absolute;width:340px;height:340px;left:var(--mx,50%);top:var(--my,0%);translate:-50% -50%;background:radial-gradient(closest-side,rgba(11,92,255,.34),transparent);opacity:0;transition:opacity .35s}
+.cartao:hover{transform:translateY(-6px);border-color:var(--linha2)}.cartao:hover::before{opacity:1}
+.cartao>*{position:relative}
+.cartao svg{width:34px;height:34px;fill:none;stroke:var(--ceu);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:22px}
+.cartao h3{font:600 20px/1.25 var(--corpo);margin-bottom:10px}
+.cartao p{color:var(--tinta2);font-size:15px}
+
+/* autor */
+.autor .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,5vw,70px);align-items:center}
+.retrato{position:relative;width:clamp(180px,22vw,260px);aspect-ratio:1}
+.retrato img{width:100%;height:100%;object-fit:cover;border-radius:50%;border:2px solid var(--azul)}
+.retrato::before{content:"";position:absolute;inset:-16px;border-radius:50%;border:1px dashed var(--linha2);animation:gira 40s linear infinite}
+.retrato::after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--ceu);box-shadow:0 0 16px var(--ceu);top:-22px;left:50%;margin-left:-6px;transform-origin:6px calc(clamp(180px,22vw,260px)/2 + 22px);animation:gira 14s linear infinite}
+@keyframes gira{to{rotate:360deg}}
+.autor p{color:var(--tinta2);max-width:64ch}
+.redes{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+
+/* fecho */
+.fecho{text-align:center;overflow:hidden}
+.fecho::before{content:"";position:absolute;inset:auto -10% -55% -10%;height:100%;background:radial-gradient(closest-side,rgba(11,92,255,.42),transparent);z-index:-1}
+.fecho h2{font-size:clamp(36px,6.4vw,84px);max-width:16ch;margin-inline:auto}
+.fecho .lead{margin:0 auto 38px}
+footer{border-top:1px solid var(--linha);padding:34px 0 50px;font-size:13px;color:var(--tinta2)}
+footer .wrap{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:start}
+footer a{color:var(--gelo);text-underline-offset:3px}
+footer p{max-width:78ch}
+
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;text-align:left}.palco{order:-1;min-height:400px}.livro{width:min(250px,62vw)}.selo{width:92px;height:92px;right:-12%}.selo b{font-size:24px}
+  .numeros .wrap{grid-template-columns:repeat(2,1fr)}.num{border-left:0;border-top:1px solid var(--linha)}.num:nth-child(-n+2){border-top:0}.num:last-child{grid-column:1/3}
+  .dias .cab{grid-template-columns:1fr}.painel{grid-template-columns:1fr}.painel>div{min-height:0}
+  .caps .grade{grid-template-columns:1fr}.visor{display:none}.lista li.on .mini{display:block}
+  .baralho{grid-template-columns:1fr}.contador{font-size:88px}.controles{grid-column:1}
+  .quem .tres{grid-template-columns:1fr}.autor .wrap{grid-template-columns:1fr}footer .wrap{grid-template-columns:1fr}
+  .rolar{display:none}.topo .btn span.longo{display:none}
+}
+@media (max-width:520px){.abas{width:100%}.abas button{flex:1;padding:0 8px}.lista button{grid-template-columns:40px 1fr}.lista button .pg{display:none}.lista .desc{grid-column:2}.lista .mini{margin-left:40px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.sobe,.rev{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="grao" aria-hidden="true"></div>
+
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a href="#inicio" aria-label="Início"><img src="assets/logo.png" alt="Simião Cavalcante" width="180" height="30"></a>
+    <a class="btn pri baixar" href="grok-bot-galaxy-simiao-cavalcante.pdf" download>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+      <span>Baixar<span class="longo"> o PDF</span></span>
+    </a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <canvas id="galaxia" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div>
+      <p class="kicker sobe d1">Ebook gratuito · PDF · 23 páginas</p>
+      <h1 class="sobe d2">Vinte e cinco horas de evento, <em class="s">resumidas</em> em 23 páginas.</h1>
+      <p class="lead sobe d3">O Grok Bot Galaxy foi a transmissão em que a SpaceXAI tentou montar uma empresa em três dias usando agentes de IA no lugar de funcionários. Este resumo em português separa o que foi explicado sobre o produto, o que foi construído ao vivo e o que serve para quem estuda ou trabalha com Direito.</p>
+      <div class="acoes sobe d4">
+        <a class="btn pri g baixar" href="grok-bot-galaxy-simiao-cavalcante.pdf" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          Baixar o ebook <small>1,2 MB</small>
+        </a>
+        <a class="btn g" href="#capitulos">Ver o que tem dentro</a>
+      </div>
+      <div class="meta-hero sobe d5"><span>Sem cadastro</span><span>Em português</span><span>Nomes conferidos na programação oficial</span></div>
+    </div>
+    <div class="palco sobe d3" id="palco">
+      <div class="livro" id="livro">
+        <div class="verso"></div><div class="paginas"></div><div class="lombada"></div>
+        <div class="capa"><img src="assets/capa.webp" alt="Capa do ebook Grok Bot Galaxy, com um notebook fechado sobre a mesa diante de uma galáxia de janelas acesas" width="1000" height="1414"></div>
+        <div class="selo"><span><b>R$ 0</b>download<br>direto</span></div>
+      </div>
+      <div class="sombra"></div>
+    </div>
+  </div>
+  <div class="rolar" aria-hidden="true"></div>
+</section>
+
+<section class="numeros" aria-label="O evento em números">
+  <div class="wrap">
+    <div class="num rev"><b data-ate="25" data-suf="h">0</b><span>de transmissão ao vivo, em inglês</span></div>
+    <div class="num rev"><b data-ate="3">0</b><span>dias para montar uma empresa do zero</span></div>
+    <div class="num rev"><b data-ate="1819">0</b><span>jogadores no lançamento do terceiro dia</span></div>
+    <div class="num rev"><b data-ate="9">0</b><span>capítulos, com cinco tabelas de consulta</span></div>
+    <div class="num rev"><b data-ate="23">0</b><span>páginas para ler em uma tarde</span></div>
+  </div>
+</section>
+
+<section class="dias" id="evento">
+  <div class="wrap">
+    <div class="cab rev">
+      <div>
+        <p class="kicker">O evento</p>
+        <h2>Três dias, <em class="s">uma empresa</em> e quatro mudanças de ideia.</h2>
+        <p class="lead">Matt Palmer, Lauren Tan e Roshan Sadanani começaram numa terça com uma organização vazia no GitHub, tratando cada bot como funcionário. Escolha um dia para ver o que aconteceu no estúdio e no palco.</p>
+      </div>
+      <div class="abas" role="tablist" aria-label="Dias do evento">
+        <span class="marca" aria-hidden="true"></span>
+        <button role="tab" aria-selected="true" aria-controls="painel" id="aba-0">Day 1</button>
+        <button role="tab" aria-selected="false" aria-controls="painel" id="aba-1" tabindex="-1">Day 2</button>
+        <button role="tab" aria-selected="false" aria-controls="painel" id="aba-2" tabindex="-1">Day 3</button>
+      </div>
+    </div>
+    <div class="painel rev" id="painel" role="tabpanel" aria-labelledby="aba-0" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="caps" id="capitulos">
+  <div class="wrap">
+    <div class="rev">
+      <p class="kicker">Por dentro do ebook</p>
+      <h2>Nove capítulos para ler <em class="s">na ordem</em> ou direto no que interessa.</h2>
+      <p class="lead">Passe o mouse ou toque num capítulo para ver a página de abertura. Cada um fecha em duas ou três páginas, com tabelas de consulta onde o conteúdo pede comparação.</p>
+    </div>
+    <div class="grade">
+      <ol class="lista rev" id="lista"></ol>
+      <aside class="visor rev" aria-hidden="true"><div class="folha" id="folha"></div><span class="etq" id="etq"></span></aside>
+    </div>
+  </div>
+</section>
+
+<section class="ideias" id="ideias">
+  <div class="wrap">
+    <div class="rev">
+      <p class="kicker">Pontos-chave</p>
+      <h2>Dez ideias para levar <em class="s">antes mesmo</em> de baixar.</h2>
+    </div>
+    <div class="baralho rev">
+      <div class="contador" id="contador" aria-hidden="true">01</div>
+      <div class="carta" id="carta" aria-live="polite"><p id="ideia"></p></div>
+      <div class="controles">
+        <button class="btn" id="ant" aria-label="Ideia anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="btn pri" id="prox">Próxima ideia <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <button class="btn" id="sorte">Sortear</button>
+        <div class="pontos" id="pontos" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quem" id="para-quem">
+  <div class="wrap">
+    <div class="rev">
+      <p class="kicker">Para quem é</p>
+      <h2>Escrito para quem quer <em class="s">usar</em>, com o cuidado de quem assina.</h2>
+    </div>
+    <div class="tres">
+      <article class="cartao rev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20M8 8h8M8 12h5"/></svg><h3>Quem estuda para concurso</h3><p>Entende como ensinar uma tarefa uma única vez para que o agente repita a revisão a cada matéria, sempre preso ao material que você enviou.</p></article>
+      <article class="cartao rev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M5 7l-3 7a3.5 3.5 0 0 0 6 0L5 7Zm14 0-3 7a3.5 3.5 0 0 0 6 0l-3-7ZM8 21h8"/></svg><h3>Quem trabalha com Direito</h3><p>Conhece os degraus de autonomia, do somente leitura ao somente rascunhos, antes de conectar qualquer caixa de e-mail ou sistema de trabalho.</p></article>
+      <article class="cartao rev"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 0 1 10 10M12 22A10 10 0 0 1 2 12M19 5l-2 2M5 19l2-2"/></svg><h3>Quem acompanha IA</h3><p>Vê o que de fato foi mostrado nos três dias, com os tropeços incluídos, sem precisar assistir a vinte e cinco horas de vídeo em inglês.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="autor" id="autor">
+  <div class="wrap">
+    <div class="retrato rev"><img src="assets/autor.jpg" alt="Simião Cavalcante" width="480" height="480" loading="lazy"></div>
+    <div class="rev">
+      <p class="kicker">Quem escreveu</p>
+      <h2>Simião <em class="s">Cavalcante</em></h2>
+      <p>Procurador do Município do Rio de Janeiro, professor e entusiasta de tecnologia, cursando MBA em Engenharia de Software pela USP e Master em Inteligência Artificial Generativa pela PUC-Rio. No YouTube e no Instagram, mostro como usar ferramentas de IA para estudar para concursos públicos com mais eficiência e para atuar com método.</p>
+      <div class="redes">
+        <a class="btn" href="https://instagram.com/simiao_cavalcante" target="_blank" rel="noopener">Instagram @simiao_cavalcante</a>
+        <a class="btn" href="https://youtube.com/@simiao.cavalcante" target="_blank" rel="noopener">YouTube @simiao.cavalcante</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fecho">
+  <div class="wrap rev">
+    <p class="kicker">Download direto</p>
+    <h2>Leve o <em class="s">resumo</em> para ler com calma.</h2>
+    <p class="lead">O arquivo abre em qualquer leitor de PDF, tem sumário, tabelas de consulta e os links das três transmissões originais no fim.</p>
+    <a class="btn pri g baixar" href="grok-bot-galaxy-simiao-cavalcante.pdf" download>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+      Baixar o ebook <small>PDF · 1,2 MB</small>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Material educativo e independente, sem vínculo com a SpaceXAI. O resumo foi elaborado a partir das transcrições automáticas das três transmissões, com os nomes dos apresentadores conferidos na programação oficial. Transmissões originais no X: <a href="https://x.com/i/broadcasts/1AxRnZbVpjaxl" target="_blank" rel="noopener">Day 1</a>, <a href="https://x.com/i/broadcasts/1PKqrNyvmYwGb" target="_blank" rel="noopener">Day 2</a> e <a href="https://x.com/i/broadcasts/1YGNrbXEeazGw" target="_blank" rel="noopener">Day 3</a>.</p>
+    <p>© 2026 Simião Cavalcante</p>
+  </div>
+</footer>
+
+<script>
+const DIAS = [
+  { data:"15 de setembro · 8h45 de transmissão", numero:"4", legenda:"mudanças de ideia antes do fim do primeiro dia",
+    estudio:"A Ship by Thursday nasce com uma organização vazia no GitHub. Um bot lê as sugestões do público no X, outro chega à proposta de um restaurante temporário com o software para operá-lo. Ao longo da tarde a ideia vira exposição de arte, depois loja de produtos do Grok Bot.",
+    palco:"Grok Bot 101 com Roman Ugarte e Amrita Venkatraman, seguido das sessões de engenharia com Lingxi Li, de produto com Kevin Niparko e de fundadores com Shub Gaur." },
+  { data:"16 de setembro · 8h23 de transmissão", numero:"1 bot", legenda:"cuja única função é desenhar os outros bots do time",
+    estudio:"O restaurante esbarra em licenças municipais, razão pela qual o trio vira a empresa para um estúdio de jogos. Lauren Tan prototipa o jogo com pareamento por Elo enquanto o Dr. Eggbot monta o time do estúdio, do engenheiro que verifica agentes em nuvem ao bot que compõe a trilha.",
+    palco:"Engenharia de vendas, vendas, prospecção com Simon Lackowski e suporte ao cliente com David Gan, cujo bot preferiu avisar o humano a inventar uma resposta." },
+  { data:"17 de setembro · 7h58 de transmissão", numero:"1.819", legenda:"jogadores até os próprios agentes derrubarem o sistema",
+    estudio:"Mais de cem propostas de código entram durante a madrugada. O Thursday Arena vai ao ar por volta das dez da manhã, com falhas corrigidas ao vivo por bots que leem o retorno dos jogadores. A poucos cadastros da meta, uma consulta ruim ao banco derruba a produção.",
+    palco:"Operações de receita com Matthew Silberman, pós-venda com Blake Schuller, que opera em regime de somente rascunhos, e marketing com Josh Kim." }
+];
+const CAPS = [
+  [4,"O evento em poucas linhas","Quem organizou, qual era o desafio de 72 horas e como os três dias se dividiram entre estúdio e palco."],
+  [6,"O que é o Grok Bot","A tese do colega de equipe e as três decisões de produto: mensagens, computador próprio e execução na nuvem."],
+  [8,"A anatomia de um bot","Descrição, computador, conexões, memória, skills, rotinas e modelos, com o alerta sobre skills nascidas de um caso só."],
+  [10,"Permissões e controle humano","Aprovações, revisão automática, senhas que o bot nunca enxerga e os quatro degraus de autonomia."],
+  [12,"Times de bots","Por que vários agentes, como o chefe de gabinete distribui o trabalho e quanto custa quando todos falam ao mesmo tempo."],
+  [14,"A empresa construída em três dias","Do restaurante temporário ao jogo Thursday Arena, com os números do lançamento numa tabela."],
+  [16,"O Grok Bot em cada área de trabalho","Engenharia, produto, fundadores, vendas, suporte, pós-venda e marketing, com o cuidado destacado em cada sessão."],
+  [19,"As lições de negócio dos convidados","Sinal de mercado com Peter Yang, distribuição com Codie Sanchez, crescimento e pagamentos feitos por agentes."],
+  [21,"O que levar para o Direito e para os estudos","Usos prudentes, o que deve ficar fora do bot e os limites admitidos pelos próprios apresentadores."]
+];
+const IDEIAS = [
+  "O Grok Bot Galaxy reuniu 25 horas de transmissão em três dias, nos quais três funcionários da SpaceXAI montaram uma empresa usando bots como funcionários.",
+  "A tese do produto é que a IA deixou de ser chat ou copiloto para se tornar colega, com responsabilidade por resultados.",
+  "Três decisões sustentam o produto: um bot por responsabilidade, computador próprio para cada bot e execução integral na nuvem.",
+  "A descrição funciona como a alma do bot, motivo pelo qual a regra mais repetida foi dar a cada agente um único trabalho.",
+  "Memória, skills e rotinas fazem o bot melhorar com o uso, desde que as skills guardem princípios, nunca a cópia de um caso.",
+  "O controle humano se dá em degraus, que vão de somente leitura a permitir sempre, com senhas que o bot nunca enxerga.",
+  "Times de bots rendem mais com um chefe de gabinete na frente, embora custem caro quando todos falam ao mesmo tempo.",
+  "A empresa do evento lançou o jogo Thursday Arena no terceiro dia, chegou a 1.819 jogadores e acabou derrubada pelos próprios agentes.",
+  "Nas áreas comerciais, o método comum foi inventariar o que delegar, criar um bot por fluxo, conectar as fontes e só então agendar rotinas.",
+  "Para o Direito e para os estudos, o caminho prudente é usar fontes públicas, manter o regime de rascunhos e deixar fora do bot o que for sigiloso."
+];
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* galáxia de janelas: espiral de pequenos retângulos acesos, como na capa */
+(() => {
+  const c = $("#galaxia"), x = c.getContext("2d"); let L, A, dpr, P = [], alvo = {x:0,y:0}, pos = {x:0,y:0}, t = 0, visivel = true, rajadas = [];
+  function cria(){
+    dpr = Math.min(devicePixelRatio || 1, 2); L = c.clientWidth; A = c.clientHeight; c.width = L * dpr; c.height = A * dpr; x.setTransform(dpr,0,0,dpr,0,0);
+    const n = Math.round(Math.min(1500, L * A / 900)); P = [];
+    for (let i = 0; i < n; i++){
+      const braco = i % 4, r = Math.pow(Math.random(), .62), ang = braco * Math.PI / 2 + r * 5.4 + (Math.random() - .5) * (.9 - r * .5);
+      P.push({ r, ang, z: Math.random(), f: Math.random() * 6.28, v: .6 + Math.random() * 2, janela: Math.random() < .55 });
+    }
+    for (let i = 0; i < 140; i++) P.push({ estrela:true, px: Math.random(), py: Math.random(), z: Math.random(), f: Math.random() * 6.28, v: .4 + Math.random() });
+  }
+  function quadro(){
+    if (visivel){
+      t += calmo ? 0 : .0016; pos.x += (alvo.x - pos.x) * .05; pos.y += (alvo.y - pos.y) * .05;
+      x.clearRect(0,0,L,A);
+      const cx = L * (L > 980 ? .72 : .5) + pos.x * 30, cy = A * (L > 980 ? .46 : .3) + pos.y * 22, R = Math.max(L, A) * (L > 980 ? .46 : .62);
+      for (const p of P){
+        if (p.estrela){ const b = .25 + .35 * Math.sin(t * 40 * p.v + p.f); x.fillStyle = `rgba(214,232,255,${b * .6})`; x.fillRect(p.px * L + pos.x * 8 * p.z, p.py * A + pos.y * 8 * p.z, 1.2, 1.2); continue; }
+        const a = p.ang + t * (1.6 - p.r), rr = p.r * R, px = cx + Math.cos(a) * rr + pos.x * 46 * p.z, py = cy + Math.sin(a) * rr * .42 + pos.y * 30 * p.z;
+        const pisca = .45 + .55 * Math.sin(t * 60 * p.v + p.f), prof = .35 + .65 * ((Math.sin(a) + 1) / 2), al = Math.min(1, (1.15 - p.r * .7) * pisca * (.3 + prof));
+        const tam = (p.janela ? 3.2 : 1.7) * (.6 + prof * .9);
+        x.fillStyle = p.r < .16 ? `rgba(214,232,255,${al})` : `rgba(${p.janela ? "74,159,255" : "11,92,255"},${al})`;
+        if (p.janela) x.fillRect(px, py, tam * 1.5, tam); else { x.beginPath(); x.arc(px, py, tam * .6, 0, 6.28); x.fill(); }
+      }
+      const g = x.createRadialGradient(cx, cy, 0, cx, cy, R * .3); g.addColorStop(0, "rgba(124,184,255,.34)"); g.addColorStop(1, "rgba(11,92,255,0)"); x.fillStyle = g; x.fillRect(0,0,L,A);
+      rajadas = rajadas.filter(r => r.vida > 0);
+      for (const r of rajadas){ r.vida -= .016; for (const q of r.pt){ q.x += q.vx; q.y += q.vy; q.vy += .05; x.fillStyle = `rgba(124,184,255,${Math.max(r.vida,0)})`; x.fillRect(q.x, q.y, 3.4, 2.4); } }
+    }
+    requestAnimationFrame(quadro);
+  }
+  addEventListener("resize", cria);
+  addEventListener("pointermove", e => { alvo.x = e.clientX / innerWidth - .5; alvo.y = e.clientY / innerHeight - .5; });
+  new IntersectionObserver(e => visivel = e[0].isIntersecting).observe(c);
+  window.rajada = (px, py) => { if (calmo) return; const r = c.getBoundingClientRect(); rajadas.push({ vida:1, pt: Array.from({length:46}, () => { const a = Math.random() * 6.28, v = 2 + Math.random() * 6; return { x:px - r.left, y:py - r.top, vx:Math.cos(a) * v, vy:Math.sin(a) * v - 2 }; }) }); };
+  cria(); quadro();
+})();
+
+/* livro que acompanha o ponteiro */
+(() => {
+  const palco = $("#palco"), livro = $("#livro"); if (calmo) return;
+  palco.addEventListener("pointermove", e => { const r = palco.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width - .5, ny = (e.clientY - r.top) / r.height - .5;
+    livro.style.setProperty("--ry", (-24 + nx * 44) + "deg"); livro.style.setProperty("--rx", (6 - ny * 22) + "deg"); livro.style.setProperty("--brilho", (nx * 60) + "%"); });
+  palco.addEventListener("pointerleave", () => { livro.style.removeProperty("--ry"); livro.style.removeProperty("--rx"); livro.style.removeProperty("--brilho"); });
+})();
+
+/* barra superior, revelação e contagem */
+addEventListener("scroll", () => $("#topo").classList.toggle("solido", scrollY > 40), { passive:true });
+const obs = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; e.target.classList.add("in"); obs.unobserve(e.target);
+  const b = e.target.querySelector("b[data-ate]"); if (b) conta(b); }), { threshold:.18 });
+$$(".rev").forEach((el, i) => { el.style.transitionDelay = (i % 5) * 70 + "ms"; obs.observe(el); });
+function conta(b){ const ate = +b.dataset.ate, suf = b.dataset.suf || "", fmt = n => n.toLocaleString("pt-BR") + suf; if (calmo){ b.textContent = fmt(ate); return; }
+  const ini = performance.now(), dur = 1500; (function passo(agora){ const k = Math.min((agora - ini) / dur, 1), e = 1 - Math.pow(1 - k, 4); b.textContent = fmt(Math.round(ate * e)); if (k < 1) requestAnimationFrame(passo); })(ini); }
+
+/* três dias */
+(() => {
+  const abas = $$(".abas button"), marca = $(".abas .marca"), painel = $("#painel");
+  function mostra(i, foco){
+    abas.forEach((a, k) => { a.setAttribute("aria-selected", k === i); a.tabIndex = k === i ? 0 : -1; });
+    marca.style.left = abas[i].offsetLeft + "px"; marca.style.width = abas[i].offsetWidth + "px"; painel.setAttribute("aria-labelledby", "aba-" + i);
+    const d = DIAS[i];
+    painel.innerHTML = `<div class="grande troca"><span class="data">${d.data}</span><div><b>${d.numero}</b><br><span>${d.legenda}</span></div></div>
+      <div class="troca"><h3>No estúdio</h3><p>${d.estudio}</p></div><div class="troca"><h3>No palco</h3><p>${d.palco}</p></div>`;
+    if (foco) abas[i].focus();
+  }
+  abas.forEach((a, i) => { a.addEventListener("click", () => mostra(i));
+    a.addEventListener("keydown", e => { if (e.key === "ArrowRight") mostra((i + 1) % 3, true); if (e.key === "ArrowLeft") mostra((i + 2) % 3, true); }); });
+  addEventListener("resize", () => mostra(abas.findIndex(a => a.getAttribute("aria-selected") === "true")));
+  document.fonts ? document.fonts.ready.then(() => mostra(0)) : mostra(0); mostra(0);
+})();
+
+/* capítulos com visor de página */
+(() => {
+  const lista = $("#lista"), folha = $("#folha"), etq = $("#etq");
+  lista.innerHTML = CAPS.map(([pg, t, d], i) => `<li><button aria-expanded="false" data-i="${i}"><span class="n">${String(i + 1).padStart(2, "0")}</span><span class="t">${t}</span><span class="pg">pág. ${pg - 1}</span><span class="desc"><p>${d}</p></span></button><img class="mini" src="assets/p${String(pg).padStart(2, "0")}.webp" alt="" loading="lazy" width="760" height="1075"></li>`).join("");
+  folha.innerHTML = CAPS.map(([pg]) => `<img src="assets/p${String(pg).padStart(2, "0")}.webp" alt="" loading="lazy" width="760" height="1075">`).join("");
+  const itens = $$("#lista li"), imgs = $$("#folha img");
+  function ativa(i){ itens.forEach((li, k) => { li.classList.toggle("on", k === i); li.firstElementChild.setAttribute("aria-expanded", k === i); }); imgs.forEach((im, k) => im.classList.toggle("on", k === i)); etq.textContent = `Capítulo ${i + 1} · página de abertura`; }
+  itens.forEach((li, i) => { const b = li.firstElementChild; b.addEventListener("click", () => ativa(i)); b.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") ativa(i); }); b.addEventListener("focus", () => ativa(i)); });
+  ativa(0);
+})();
+
+/* baralho de ideias */
+(() => {
+  let i = 0; const p = $("#ideia"), cont = $("#contador"), carta = $("#carta"), pontos = $("#pontos");
+  pontos.innerHTML = IDEIAS.map(() => "<i></i>").join("");
+  function mostra(n){ i = (n + IDEIAS.length) % IDEIAS.length; p.textContent = IDEIAS[i]; cont.textContent = String(i + 1).padStart(2, "0");
+    [...pontos.children].forEach((d, k) => d.classList.toggle("on", k === i)); carta.classList.remove("troca"); void carta.offsetWidth; carta.classList.add("troca"); }
+  $("#prox").onclick = () => mostra(i + 1); $("#ant").onclick = () => mostra(i - 1);
+  $("#sorte").onclick = () => { let n; do n = Math.floor(Math.random() * IDEIAS.length); while (n === i); mostra(n); };
+  mostra(0);
+})();
+
+/* brilho que segue o ponteiro nos cartões e rajada no download */
+$$(".cartao").forEach(c => c.addEventListener("pointermove", e => { const r = c.getBoundingClientRect(); c.style.setProperty("--mx", (e.clientX - r.left) + "px"); c.style.setProperty("--my", (e.clientY - r.top) + "px"); }));
+$$(".baixar").forEach(b => b.addEventListener("click", e => window.rajada && window.rajada(e.clientX, e.clientY)));
+</script>
+</body>
+</html>
